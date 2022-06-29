@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+ <div class="service">
+        <h1 class="text_set">TEST NAME ENCODE</h1>
+        <form method="post">
+        {% csrf_token %}
+            {{ form.as_p }}
+        <div class="form-group">
+            <label class="text_in" >original</label>
+        </div>
+        <div>
+            <p class="line">→</p>
+        </div>
+        <div>
+            <label class="text_out" >change</label>
+            <div class="result">{{ changeencode.change }}</div>
+        </div>
+            <button class="chenge" type="submit">change</button>
+        </form>
+    </div>
+{% endblock %}
